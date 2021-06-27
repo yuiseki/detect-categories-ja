@@ -1,8 +1,15 @@
 {
   "name": "detect-categories-ja",
+  "description": "日本語文字列のカテゴリを判定するnpmライブラリ",
   "version": "0.0.1",
-  "main": "dist/index.js",
   "license": "MIT",
+  "author": "Yui Matsumura <yuiseki@gmail.com> (https://twitter.com/yuiseki_)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuiseki/detect-categories-ja.git"
+  },
+  "homepage": "https://github.com/yuiseki/detect-categories-ja#readme",
+  "main": "dist/index.js",
   "files": [
     "dist"
   ],
