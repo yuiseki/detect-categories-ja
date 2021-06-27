@@ -4,8 +4,10 @@ interface Category {
     words: string[];
 }
 export declare const categories: Category[];
-export declare const detectCategories: (text: string) => Promise<{
+interface DetectResult {
     id: string;
     name: string;
-}[]>;
+    count: number;
+}
+export declare const detectCategories: (text: string) => Promise<DetectResult[]>;
 export {};
