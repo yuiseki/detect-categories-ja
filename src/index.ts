@@ -10,6 +10,11 @@ import nikkei from './categories/nikkei.json';
 import sports from './categories/sports.json';
 import mental_disorder from './categories/mental_disorder.json';
 import physical_disorder from './categories/physical_disorder.json';
+import dispatch_caution from './categories/dispatch_caution.json';
+import dispatch_fire from './categories/dispatch_fire.json';
+import dispatch_rescue from './categories/dispatch_rescue.json';
+import dispatch_support from './categories/dispatch_support.json';
+import dispatch_survery from './categories/dispatch_survery.json';
 
 interface Category {
   id: string;
@@ -30,6 +35,11 @@ export const categories:Category[] = [
   sports,
   mental_disorder,
   physical_disorder,
+  dispatch_caution,
+  dispatch_fire,
+  dispatch_rescue,
+  dispatch_support,
+  dispatch_survery
 ];
 
 interface DetectResult {
@@ -40,8 +50,8 @@ interface DetectResult {
 
 export const detectCategories = async (text:string) => {
   const detectedCategories:DetectResult[] = [];
-  for (const category of categories) {
-    for (const word of category.words) {
+  for await (const category of categories) {
+    for await (const word of category.words) {
       const regexp = new RegExp(word, 'g');
       if (text.match(regexp)) {
         const ids = detectedCategories.map((c) => {return c.id});
@@ -63,5 +73,7 @@ export const detectCategories = async (text:string) => {
       }
     }
   }
-  return detectedCategories;
+  return detectedCategories.sort(function (a, b) {
+    return b.count - a.count;
+  });
 }

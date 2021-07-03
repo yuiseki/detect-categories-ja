@@ -39,11 +39,11 @@ describe('複合カテゴリを判定できる', () => {
 
 describe('カテゴリの出現をカウントできる', () => {
   it.each([
-    '地震災害によって津波が発生しました',
+    '地震災害によって津波が発生し、首相が災害派遣を決定しました',
   ])('%s', async (text) => {
       const categories = await detectCategories(text);
-      const crisis = categories.filter((c) => {return (c.id === 'crisis')});
-      expect(crisis[0].count).toBe(3);
+      expect(categories[0].count).toBe(4);
+      expect(categories[1].count).toBe(1);
   })
 
 })
