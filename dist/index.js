@@ -46,7 +46,7 @@ const detectCategories = async (text) => {
     for await (const category of exports.categories) {
         for await (const word of category.words) {
             const regexp = new RegExp(word, 'g');
-            if (text.match(regexp)) {
+            if (String(text).match(regexp)) {
                 const ids = detectedCategories.map((c) => { return c.id; });
                 const idx = ids.indexOf(category.id);
                 if (idx === -1) {
