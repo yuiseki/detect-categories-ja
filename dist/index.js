@@ -16,6 +16,11 @@ const nikkei_json_1 = __importDefault(require("./categories/nikkei.json"));
 const sports_json_1 = __importDefault(require("./categories/sports.json"));
 const mental_disorder_json_1 = __importDefault(require("./categories/mental_disorder.json"));
 const physical_disorder_json_1 = __importDefault(require("./categories/physical_disorder.json"));
+const dispatch_caution_json_1 = __importDefault(require("./categories/dispatch_caution.json"));
+const dispatch_fire_json_1 = __importDefault(require("./categories/dispatch_fire.json"));
+const dispatch_rescue_json_1 = __importDefault(require("./categories/dispatch_rescue.json"));
+const dispatch_support_json_1 = __importDefault(require("./categories/dispatch_support.json"));
+const dispatch_survery_json_1 = __importDefault(require("./categories/dispatch_survery.json"));
 ;
 exports.categories = [
     crisis_json_1.default,
@@ -30,11 +35,16 @@ exports.categories = [
     sports_json_1.default,
     mental_disorder_json_1.default,
     physical_disorder_json_1.default,
+    dispatch_caution_json_1.default,
+    dispatch_fire_json_1.default,
+    dispatch_rescue_json_1.default,
+    dispatch_support_json_1.default,
+    dispatch_survery_json_1.default
 ];
 const detectCategories = async (text) => {
     const detectedCategories = [];
-    for (const category of exports.categories) {
-        for (const word of category.words) {
+    for await (const category of exports.categories) {
+        for await (const word of category.words) {
             const regexp = new RegExp(word, 'g');
             if (text.match(regexp)) {
                 const ids = detectedCategories.map((c) => { return c.id; });
@@ -57,6 +67,8 @@ const detectCategories = async (text) => {
             }
         }
     }
-    return detectedCategories;
+    return detectedCategories.sort(function (a, b) {
+        return b.count - a.count;
+    });
 };
 exports.detectCategories = detectCategories;
