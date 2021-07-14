@@ -10,10 +10,15 @@ const accident_json_1 = __importDefault(require("./categories/accident.json"));
 const incident_json_1 = __importDefault(require("./categories/incident.json"));
 const child_abuse_json_1 = __importDefault(require("./categories/child_abuse.json"));
 const drug_abuse_json_1 = __importDefault(require("./categories/drug_abuse.json"));
-const poverty_json_1 = __importDefault(require("./categories/poverty.json"));
 const politics_json_1 = __importDefault(require("./categories/politics.json"));
 const nikkei_json_1 = __importDefault(require("./categories/nikkei.json"));
 const sports_json_1 = __importDefault(require("./categories/sports.json"));
+const poverty_json_1 = __importDefault(require("./categories/poverty.json"));
+const poverty_child_json_1 = __importDefault(require("./categories/poverty_child.json"));
+const poverty_disparity_json_1 = __importDefault(require("./categories/poverty_disparity.json"));
+const poverty_food_json_1 = __importDefault(require("./categories/poverty_food.json"));
+const poverty_non_regular_json_1 = __importDefault(require("./categories/poverty_non_regular.json"));
+const poverty_one_parent_json_1 = __importDefault(require("./categories/poverty_one_parent.json"));
 const mental_disorder_json_1 = __importDefault(require("./categories/mental_disorder.json"));
 const physical_disorder_json_1 = __importDefault(require("./categories/physical_disorder.json"));
 const dispatch_caution_json_1 = __importDefault(require("./categories/dispatch_caution.json"));
@@ -29,10 +34,15 @@ exports.categories = [
     incident_json_1.default,
     child_abuse_json_1.default,
     drug_abuse_json_1.default,
-    poverty_json_1.default,
     politics_json_1.default,
     nikkei_json_1.default,
     sports_json_1.default,
+    poverty_json_1.default,
+    poverty_child_json_1.default,
+    poverty_disparity_json_1.default,
+    poverty_food_json_1.default,
+    poverty_non_regular_json_1.default,
+    poverty_one_parent_json_1.default,
     mental_disorder_json_1.default,
     physical_disorder_json_1.default,
     dispatch_caution_json_1.default,
