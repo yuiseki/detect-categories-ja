@@ -20,7 +20,9 @@ const poverty_disparity_json_1 = __importDefault(require("./categories/poverty_d
 const poverty_food_json_1 = __importDefault(require("./categories/poverty_food.json"));
 const poverty_non_regular_json_1 = __importDefault(require("./categories/poverty_non_regular.json"));
 const poverty_one_parent_json_1 = __importDefault(require("./categories/poverty_one_parent.json"));
+const poverty_senior_json_1 = __importDefault(require("./categories/poverty_senior.json"));
 const poverty_tech_intern_json_1 = __importDefault(require("./categories/poverty_tech_intern.json"));
+const poverty_woman_json_1 = __importDefault(require("./categories/poverty_woman.json"));
 const mental_disorder_json_1 = __importDefault(require("./categories/mental_disorder.json"));
 const physical_disorder_json_1 = __importDefault(require("./categories/physical_disorder.json"));
 const dispatch_caution_json_1 = __importDefault(require("./categories/dispatch_caution.json"));
@@ -46,7 +48,9 @@ exports.categories = [
     poverty_food_json_1.default,
     poverty_non_regular_json_1.default,
     poverty_one_parent_json_1.default,
+    poverty_senior_json_1.default,
     poverty_tech_intern_json_1.default,
+    poverty_woman_json_1.default,
     mental_disorder_json_1.default,
     physical_disorder_json_1.default,
     dispatch_caution_json_1.default,

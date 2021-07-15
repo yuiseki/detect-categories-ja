@@ -14,7 +14,9 @@ import poverty_disparity from './categories/poverty_disparity.json';
 import poverty_food from './categories/poverty_food.json';
 import poverty_non_regular from './categories/poverty_non_regular.json';
 import poverty_one_parent from './categories/poverty_one_parent.json';
+import poverty_senior from './categories/poverty_senior.json';
 import poverty_tech_intern from './categories/poverty_tech_intern.json';
+import poverty_woman from './categories/poverty_woman.json'
 import mental_disorder from './categories/mental_disorder.json';
 import physical_disorder from './categories/physical_disorder.json';
 import dispatch_caution from './categories/dispatch_caution.json';
@@ -46,7 +48,9 @@ export const categories:Category[] = [
   poverty_food,
   poverty_non_regular,
   poverty_one_parent,
+  poverty_senior,
   poverty_tech_intern,
+  poverty_woman,
   mental_disorder,
   physical_disorder,
   dispatch_caution,
